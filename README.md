@@ -1,9 +1,36 @@
-# Marketplace Marketing Strategy Change Review
-Domain: e-commerce; Stack: PostgreSQL, Python, JupyterLab; Objective: comprehensive analysis of marketplace data with a focus on traffic sources
+## Marketplace Marketing Strategy Change Review
 
-## Тематика проекта: аналитика маркетплейса
+- Domain: e-commerce analytics, marketing analytics;
+- Teck Stack: PostgreSQL, Python, JupyterLab;
+- Objective: comprehensive analysis of marketplace data with a focus on traffic sources
+- Artefacts: *data_mart.sql* file with SQL queries to form main tables for data analysis, Jupyter Notebook *marketplace_marketing_strategy_change_review.ipynb* with EDA and hypotheses, *marketplace_first_purchase_bonus_AB_test.ipynb* with post-hoc analysis of A/B experiment data (e.g. statistical tests), conclusions and recommendations
 
-## Этапы проекта (исследовательский анализ данных): 
+Libraries and versions are in *requirements.txt* file
+
+---
+## Анализ изменения маркетинговой стратегии маркетплейса
+
+- Домен: e-commerce аналитика, маркетинговая аналитика;
+- Стек: PostgreSQL, Python, JupyterLab;
+- Цель: комплексный анализ данных маркетплейса с акцентом на источники трафика
+- Артефакты: файл *data_mart.sql* с SQL-запросами для формирования витрин данных, Jupyter Notebook *marketplace_marketing_strategy_change_review.ipynb* с исследовательским анализом данных и гипотезами, *marketplace_first_purchase_bonus_AB_test.ipynb* с post-hoc анализом данных A/B эксперимента, выводами и рекомендациями
+
+Необходимые библиотеки и версии в файле *requirements.txt*
+
+---
+
+Содержание:
+1. [Выводы по исследовательскому анализу данных](#выводы-по-исследовательскому-анализу-данных)
+> - [Вывод по анализу дерева метрик](#вывод-по-анализу-дерева-метрик)
+> - [Вывод по сегментации по каналу привлечения пользователей](#вывод-по-сегментации-по-каналу-привлечения-пользователей)
+2. [Анализ данных AB эксперимента](#анализ-данных-ab-эксперимента)
+> - [Описание дизайна AB-теста](#описание-дизайна-ab-теста)
+> - [Вывод по результатам post-hoc анализа](#вывод-по-результатам-post-hoc-анализа)
+3. [Рекомендации](#рекомендации)
+
+
+## Выводы по исследовательскому анализу данных
+Ход анализа:
 1. Первичный анализ и сбор данных, построение витрин данных (SQL, построение ER-диаграммы)
 2. Обзор ключевых метрик (построение дерева метрик, расчет основных метрик и поиск взаимосвязей)
 3. Оценка метрик монетизации и юнит-экономики
@@ -47,13 +74,13 @@ Domain: e-commerce; Stack: PostgreSQL, Python, JupyterLab; Objective: comprehens
 
 Для тестирования была выбрана гипотеза, согласно которой для пользователей, пришедших из канала TikTok, на конверсию можно влиять при помощи финансовых стимуляций (бонус на первую покупку)
 
-## Этапы проекта (A/B эксперимент):
+## Анализ данных AB эксперимента
 
 5. Описание дизайна A/B-теста, определение метрик и статистических критериев
 6. Загрузка и изучение датасетов, построение ER-диаграммы
 7. Post-hoc анализ данных A/B-эксперимента
 
-### Описание дизайна A/B-теста
+### Описание дизайна AB-теста
 
 #### Описание фичи и зона ее влияния на пользователей
 Фича — предоставление бонуса на первую покупку новым пользователям, привлеченным через TikTok. Цель — повышение конверсии среди пользователей, привлечённых через канал TikTok. Бонус на первую покупку должен стимулировать пользователей совершать первую покупку => повышать конверсию
